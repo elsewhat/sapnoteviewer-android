@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	clipChildren="false"
+    >
+
+<!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+<LinearLayout
+    android:focusable="true" android:focusableInTouchMode="true"
+    android:layout_width="0px" android:layout_height="0px"/>
+			    
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+
+
+		<TextView android:layout_width="wrap_content"
+			style="@style/LabelText"
+			android:layout_height="wrap_content" 
+			android:text="@string/lblNote" />
+		<EditText android:id="@+id/txtNote" 
+		  android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_weight="1"
+			android:numeric="decimal"
+			android:maxLength="10"
+			android:paddingTop="1dip"
+			/>
+
+	
+		<Button android:id="@+id/bView" 
+		  android:text="@string/bView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			 />
+		<!--  out of scope for now. Maybe in the future 
+		<ImageView android:src="@android:drawable/btn_star_big_off"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+		/>		
+		-->	 
+		
+	</LinearLayout>    
+   
+<WebView 
+android:id="@+id/webview"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:isScrollContainer="true"
+/>
+</LinearLayout>
+
+
+
